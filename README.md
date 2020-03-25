@@ -1,4 +1,6 @@
-![alt tag](http://4tronix.co.uk/blog/wp-content/uploads/2014/01/IMG_0277a.jpg)
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/myo.jpg)
+
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/initio.jpg)
 
 ## Required Hardware
 
