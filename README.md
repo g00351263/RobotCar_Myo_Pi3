@@ -1,10 +1,12 @@
 
 # About the Project
-## Name	: Inition Robot Car Control Using Myo Armband Gesture
-## Module	: Gesture Based User Interface, BSc Hons Software Development.
+## Name	: 
+Inition Robot Car Control Using Myo Armband Gesture
+## Module	: 
+Gesture Based User Interface, BSc Hons Software Development.
 
-## Introuduction: I was required to develop a project by using gesture or voice to control hardware devices or software objects.
-Hence, I have choosen the project of moving a robot car using the hand gestures. Following are the devices/software needed.
+## Introuduction: 
+I was required to develop a project by using gesture or voice to control hardware devices or software objects. Hence, I have choosen the project of moving a robot car using the hand gestures. Following are the devices/software needed.
 
 
 ## Required Hardware
