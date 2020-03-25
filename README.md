@@ -1,6 +1,6 @@
-![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/myo.jpg)
 
-![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/initio.jpg)
+
+
 
 ## Required Hardware
 
@@ -10,8 +10,10 @@ Rasberry pi 3 Model B V1.2 - Website [here](https://www.raspberrypi.org/products
 
 Robohat V1.7 - Website [here](https://shop.4tronix.co.uk/products/robohat)       
 
-Myo Armband - Website [here](https://www.myo.com/)    
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/initio.jpg)
 
+Myo Armband - Website [here](https://www.myo.com/)    
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/myo.jpg)
 
 ## Required Software
 
