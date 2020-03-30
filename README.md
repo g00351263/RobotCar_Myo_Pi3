@@ -50,7 +50,7 @@ The Myo dongle bluetooth must be connected.
 - Go to sample folder in the project
 - Execute this command:
   ```
-  run.py
+  python run.py
 
 
 ## Installations and Testing
