@@ -8,6 +8,8 @@ Gesture Based User Interface, BSc Hons Software Development.
 I was required to develop a project by using gesture or voice to control hardware devices or software objects. Hence, I have choosen the project of moving a robot car using the hand gestures. Following are the devices/software needed.
 
 
+(Important) Make sure python version (2.7)is the version used, otherwise might get conflict and code won't run. Also let myo armband heat up to work.
+
 ## Required Hardware
 
 4tronix inition robot car chasis -  Website [here](https://4tronix.co.uk/blog/?p=169)
@@ -27,6 +29,33 @@ Rasbian OS for Rasberry pi- Website [here](https://www.raspberrypi.org/downloads
 
 Python to run scripts
 
+Direct bluetooth connection between Linux and Myo armband using Bluegiga BGAPI/BGLib
+
+Tested in a Raspberry Pi. video: https://www.youtube.com/watch?v=AWxEL4l4Fg8
+
+### Pre-requirements for your Myo device
+- Firmware version 1.3.1448 or higher
+- It is necessary to calibrate your Myo device using the official software.
+- Use the Myo dongle bluetooth
+
+### Requirements
+- python >=2.6
+- pySerial
+- enum34
+
+### Execute Sample
+The Myo dongle bluetooth must be connected.
+
+- Open the console "terminal" 
+- Go to sample folder in the project
+- Execute this command:
+  ```
+  python test_myo.py
+-after this Execute this command
+  ```
+  run.py
+
+
 ## Installations and Testing
 
 1. Install Rasbian OS into Raspberry Pi.
@@ -38,7 +67,7 @@ Python to run scripts
 [PyoConnect](http://www.fernandocosentino.net/pyoconnect/)
 
 		
-3. Using the python run the scripts on command line i.e. python project.py.
+3. Using the python version -- run the scripts on command line i.e. python project.py.
 
 4. Wear the Myo armband on any of arm just below elbow.
 	1. Click here for learn how to use Myo.
@@ -56,7 +85,7 @@ Python to run scripts
 6. Some other good tutorials for the project. Click here
 [Tutorial](https://www.hackster.io/brink-io/rover-controlled-using-myo-armband-and-raspberry-pi-3-c09379)
 
-##Code Explaination
+## Code Explaination
 
 1. First is to connect Myo with Pi, Follow the code at http://www.fernandocosentino.net/pyoconnect/) also you can get here all the code to detect the poses.
 
@@ -74,7 +103,17 @@ Python to run scripts
 			
 			2. Following is the functions made from pyoconnect to detect pose
 				
-				1. def onPoseEdge(pose):
+				1. def on_Pose(pose):
+					if pose == pose.REST:
+					elif pose == pose.FIST:
+					elif pose == pose.WAVE_OUT:
+					elif pose == pose.WAVE_IN:
+					elif pose == pose.FINGERS_SPREAD:
+			
+			
+			3. After Combining above 2 we can move car with gesture from Myo Armband
+				
+				1. def on_pose(pose):
 					if pose == pose.REST:
 					robohat.stop()
 					elif pose == pose.FIST:
@@ -85,15 +124,9 @@ Python to run scripts
 					robohat.spinRight()
 					elif pose == pose.FINGERS_SPREAD:
 					robohat.forward()
-			
-			3. After Combining above 2 we can move car with gesture from Myo Armband
-				
-				1. def onPoseEdge(pose):
-					if pose == pose.REST:
-					elif pose == pose.FIST:
-					elif pose == pose.WAVE_OUT:
-					elif pose == pose.WAVE_IN:
-					elif pose == pose.FINGERS_SPREAD:
+
+			4. We can get distance from the ultrasonic sensor 
+by using robohat.getDistance() and combining this with if statement in pose = Fist then get distance and distance less than 20 cms then turn right and continue until distance is less than 20 cms.
 
 
 ## Issues During The Project
@@ -107,7 +140,12 @@ Python to run scripts
 					
 ## Authors
 
-[Raja Naseer Ahmed Khan Dated 1/03/2020](https://github.com/g00351263/RobotCar_Myo_Pi3)            
+[Raja Naseer Ahmed Khan Dated 1/03/2020](https://github.com/g00351263/RobotCar_Myo_Pi3)
+
+## References            
+
+[PyoConnect](http://www.fernandocosentino.net/pyoconnect/)
+[Myo Connection](https://github.com/avineshmohan/Rover-Myo)
 
 ## License
 
