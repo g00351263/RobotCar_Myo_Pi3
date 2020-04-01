@@ -2,13 +2,10 @@
 
 import sys
 import time
-
+# getting access to function for my from libaray
+sys.path.append('../lib/')
 # access to robohat function
 import robohat
-
-# getting access to function for my from libarar
-sys.path.append('../lib/')
-
 
 # accessing my libraries
 from myo import Myo

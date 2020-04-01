@@ -18,10 +18,10 @@ Rasberry pi 3 Model B V1.2 - Website [here](https://www.raspberrypi.org/products
 
 Robohat V1.7 - Website [here](https://shop.4tronix.co.uk/products/robohat)       
 
-![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/initio.jpg)
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/images/initio.jpg)
 
 Myo Armband - Website [here](https://www.myo.com/)    
-![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/myo.jpg)
+![alt tag](https://github.com/g00351263/RobotCar_Myo_Pi3/blob/master/images/myo.jpg)
 
 ## Required Software
 
@@ -134,7 +134,14 @@ by using robohat.getDistance() and combining this with if statement in pose = Fi
 3. Corona Virus outbreak pandemic, colleges closed, no physical access to any material or hardware from college, but still got through the project.
 
 4. Code for the both of the above devices was hard to adopt as Myo is discontinued and Robohat is not being used to much. usually people can control low power consumption components with GPIO library and directly from PI board, but power output wasn't enough to run 2 motors of our robot car.
-					
+
+## Conclusion
+
+We have learned how to use our coding skills along with the electronic components to get bit glimpse of Embedded Programming, but this wasn't a true embedded programming as we have to go through the libraries to make Myo work, which has been discontinued product, Hence not much support was available. Real Robotics programming is similar where we control the output power of each terminal, which is then input in another function to compute the output of each desired terminal will signal, That will calculate the speed, rotation angle, and stop statements of the robot.
+
+## Recommendations
+
+I would sincerely recommend to use the available gesture devices which are still in production, as there will be lots of support avaialbe and in all the languages would be supported to.				
 ## Authors
 
 [Raja Naseer Ahmed Khan Dated 1/03/2020](https://github.com/g00351263/RobotCar_Myo_Pi3)
