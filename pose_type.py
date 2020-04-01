@@ -1,5 +1,9 @@
+# Raja Naseer Ahmed Khan
+
+# enum access
 from enum import Enum
 
+# defining the pose and assigning them numbers
 class PoseType(Enum):
 	REST = 0
 	FIST = 1

@@ -2,14 +2,18 @@
 
 # this class will give us easy access to main method all the poses defined, also the robot movement is inserted here on pose detection
 import sys
+
+# functions if we need sleep method to give gap
 import time
+
+# access to robohat circuit
 import robohat
 
 # getting files from lib folder
 sys.path.append('../lib/')
 
 
-# all the imports needed for working with myo and poses
+# all the funtionss needed for working with myo and poses
 from device_listener import DeviceListener
 from pose_type import PoseType
 

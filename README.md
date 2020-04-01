@@ -125,6 +125,26 @@ The Myo dongle bluetooth must be connected.
 			4. We can get distance from the ultrasonic sensor 
 by using robohat.getDistance() and combining this with if statement in pose = Fist then get distance and distance less than 20 cms then turn right and continue until distance is less than 20 cms.
 
+## Files and Their Details
+1. run this for project.py = has main function to run and starting Myo listner to pass on values to car.
+
+2. pose_listener.py = is used to get the poses performed and return funtions on detection of each pose.
+
+3. device_listener.py = is used to start listening to Myo armband.
+
+4. robohat = giving access to functions to robohat circuit using low level interace in Raspbbery pi 3.
+
+5. pose_type.py = enum giving access to pose types with numbers unique numbers assigned to each pose.
+
+6. \lib\vibration_type.py = enum file for assigning numbers to vibration types
+
+7. \lib\myo.py = has all the functions from myo libaries available for working with Myo (its downloaded from pyoconnect)
+
+8. \lib\ble.py = is giving access to bluetooth of Raspberry pi with code downloaded one of the reference.
+
+9. \lib\packet.py = getting the structured function from utilities and returning data from my.
+
+10. \lib\utilities.py = is defining structure of for some of the functions will be used fetch,pass and map data.
 
 ## Issues During The Project
 1. Shared the Pi and robohat with classmates, who burned down the pi and robohat, bought new robohat first, which was also defected and not supplying the current to dedicated motor connectors on roboHat. So, i utilized my electronics knowledge to change the one of the 2 diodes which were protecting the circuit on adapter connector and wire connector. hence, i used the direct wire connector which is shown by vin on robohat.

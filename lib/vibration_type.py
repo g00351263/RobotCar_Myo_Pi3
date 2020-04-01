@@ -1,3 +1,6 @@
+# Raja Naseer Ahmed Khan
+
+# enum for vibration type in Myo
 from enum import Enum
 
 class VibrationType(Enum):

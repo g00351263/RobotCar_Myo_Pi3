@@ -1,14 +1,25 @@
+# Raja Naseer Ahmed Khan
+
+# import to access serial port
 import serial
+
+#access to sleep function
 import time
+
+# access to functions defined in Packet
 from packet import Packet
+
+# all the functions from the utilities
 from utilities import *
 
+# defining class for connection of bluetooth
 class BLE(object):
+#function to get access to the serial port and start listening for incoming Myo device
     def __init__(self, tty_port):
         self.ser = serial.Serial(port=tty_port, baudrate=9600, timeout=1, dsrdtr=1)
         self.buffer = []
         self.listeners = []
-
+# data being recieved from Myo band
     def receive_packet(self, timeout=None):
         start_time = time.time()
         self.ser.timeout = None
