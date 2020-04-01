@@ -3,7 +3,7 @@ import sys
 import tty
 import termios
 import robohat, time
-sys.path.append('../lib/')
+sys.path.append('../modules/')
 
 
 

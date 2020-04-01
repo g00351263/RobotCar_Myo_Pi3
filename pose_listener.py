@@ -10,7 +10,7 @@ import time
 import robohat
 
 # getting files from lib folder
-sys.path.append('../lib/')
+sys.path.append('../modules/')
 
 
 # all the funtionss needed for working with myo and poses

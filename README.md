@@ -79,9 +79,6 @@ The Myo dongle bluetooth must be connected.
 	4. Wave Right to move right
 	5. Relaxing hand to stop car
 
-6. Some other good tutorials for the project. Click here
-[Tutorial](https://www.hackster.io/brink-io/rover-controlled-using-myo-armband-and-raspberry-pi-3-c09379)
-
 ## Code Explaination
 
 1. First is to connect Myo with Pi, Follow the code at http://www.fernandocosentino.net/pyoconnect/) also you can get here all the code to detect the poses.
@@ -168,8 +165,11 @@ I would sincerely recommend to use the available gesture devices which are still
 
 ## References            
 
-[PyoConnect](http://www.fernandocosentino.net/pyoconnect/)
-[Myo Connection](https://github.com/avineshmohan/Rover-Myo)
+Myo Library File [PyoConnect](http://www.fernandocosentino.net/pyoconnect/)
+4tronix inition robot car chasis -  Website [here](https://4tronix.co.uk/blog/?p=169)
+Rasberry pi 3 Model B V1.2 - Website [here](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)       
+Robohat V1.7 - Website [here](https://shop.4tronix.co.uk/products/robohat) 
+Some other good tutorials for the project. Click here [Tutorial](https://www.hackster.io/brink-io/rover-controlled-using-myo-armband-and-raspberry-pi-3-c09379)
 
 ## License
 

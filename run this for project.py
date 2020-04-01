@@ -3,7 +3,7 @@
 import sys
 import time
 # getting access to function for my from libaray
-sys.path.append('../lib/')
+sys.path.append('../modules/')
 # access to robohat function
 import robohat
 
