@@ -1,4 +1,4 @@
-from utilities import *
+from struct import *
 
 class Packet(object):
     def __init__(self, ords):

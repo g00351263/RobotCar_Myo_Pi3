@@ -9,11 +9,11 @@ import time
 # access to functions defined in Packet
 from packet import Packet
 
-# all the functions from the utilities
-from utilities import *
+# all the functions from the struct
+from struct import *
 
 # defining class for connection of bluetooth
-class BLE(object):
+class BlueTooth(object):
 #function to get access to the serial port and start listening for incoming Myo device
     def __init__(self, tty_port):
         self.ser = serial.Serial(port=tty_port, baudrate=9600, timeout=1, dsrdtr=1)

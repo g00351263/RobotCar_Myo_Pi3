@@ -1,7 +1,7 @@
 # Raja Naseer Ahmed Khan
 
-# access to functions from utilities files
-from utilities import *
+# access to functions from struct files
+from struct import *
 
 # class defined to be used to connect and check data
 class DeviceListener(object):

@@ -1,9 +1,10 @@
 
 import sys
+sys.path.append('./modules/')
 import tty
 import termios
-import robohat, time
-sys.path.append('../modules/')
+import car, time
+
 
 
 
@@ -51,7 +52,7 @@ print "Speed changes take effect when the next arrow key is pressed"
 print "Press Ctrl-C to end"
 print
 
-robohat.init()
+car.init()
 print('Start Myo for Linux')
 
 listener = PrintPoseListener()
@@ -66,22 +67,22 @@ def main():
         
         while True:
             myo.run()
-            dist = robohat.getDistance()
+            dist = car.getDistance()
             print "Distance: ", int(dist)
 
 
             keyp = readkey()
             if keyp == 'w' or ord(keyp) == 16:
-                robohat.forward(speed)
-                robohat.obstruction(dist)
+                car.forward(speed)
+                car.obstruction(dist)
             elif keyp == 'z' or ord(keyp) == 17:
-                robohat.reverse(speed)
+                car.reverse(speed)
                 print 'Reverse', speed
             elif keyp == 's' or ord(keyp) == 18:
-                robohat.spinRight(speed)
+                car.spinRight(speed)
                 print 'Spin Right', speed
             elif keyp == 'a' or ord(keyp) == 19:
-                robohat.spinLeft(speed)
+                car.spinLeft(speed)
                 print 'Spin Left', speed
             elif keyp == '.' or keyp == '>':
                 speed = min(100, speed+10)
@@ -90,7 +91,7 @@ def main():
                 speed = max (0, speed-10)
                 print 'Speed-', speed
             elif keyp == ' ':
-                robohat.stop()
+                car.stop()
                 print 'Stop'
             elif ord(keyp) == 3:
                 break
@@ -100,7 +101,7 @@ def main():
         pass
 
     finally:
-        robohat.cleanup()
+        car.cleanup()
         myo.safely_disconnect()
         print('Finished.')
 

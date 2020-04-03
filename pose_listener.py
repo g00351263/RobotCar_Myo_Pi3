@@ -6,8 +6,8 @@ import sys
 # functions if we need sleep method to give gap
 import time
 
-# access to robohat circuit
-import robohat
+# access to car circuit
+import car
 
 # getting files from lib folder
 sys.path.append('../modules/')
@@ -27,7 +27,7 @@ class PrintPoseListener(DeviceListener):
                     print("-------------------")
                     print("Forward")
                     print("--------------------")
-                    robohat.reverse(10)
+                    car.reverse(10)
                 #forward
         
             elif(pose_type.name== "DOUBLE_TAP"):
@@ -41,7 +41,7 @@ class PrintPoseListener(DeviceListener):
                     print("--------------------")
                     print("Left Turning")
                     print("--------------------")
-                    robohat.spinLeft(10)
+                    car.spinLeft(10)
 
                 #left
   
@@ -49,21 +49,21 @@ class PrintPoseListener(DeviceListener):
                     print("--------------------")
                     print("Right Turning")
                     print("--------------------")
-                    robohat.spinRight(10)
+                    car.spinRight(10)
                     
                 #right
             elif(pose_type.name== "REST"):
                     print("--------------------")
                     print("Stopped")
                     print("--------------------")
-                    robohat.stop()
+                    car.stop()
                 #right
             
             elif(pose_type.name== "FIST"):
                     print("---------------------")
                     print("Reverse")
                     print("--------------------")
-                    robohat.forward(10)
+                    car.forward(10)
 
                 
                 

@@ -5,7 +5,7 @@ import time
 # getting access to function for my from libaray
 sys.path.append('../modules/')
 # access to robohat function
-import robohat
+import car
 
 # accessing my libraries
 from myo import Myo
@@ -23,7 +23,7 @@ from pose_type import PoseType
 from device_listener import DeviceListener
 
 # intialising the robohat circuit
-robohat.init()
+car.init()
 
 # main method
 def main():
