@@ -1,5 +1,3 @@
-# Raja Naseer Ahmed khan
-
 import struct
 
 def pack(fmt, *args):

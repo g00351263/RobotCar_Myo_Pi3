@@ -1,16 +1,3 @@
-#!/usr/bin/python
-#
-# Python Module to externalise all Initio/RoboHAT specific hardware
-#
-# Created by Gareth Davies, Feb 2016
-# Copyright 4tronix
-#
-# This code is in the public domain and may be freely copied and used
-# No warranty is provided or implied
-#
-#======================================================================
-
-
 #======================================================================
 # General Functions
 #
@@ -32,30 +19,10 @@
 # turnreverse(leftSpeed, rightSpeed): Moves backwards in an arc by setting different speeds. 0 <= leftSpeed,rightSpeed <= 100
 #======================================================================
 
-
-#======================================================================
-# IR Sensor Functions
-#
-# irLeft(): Returns state of Left IR Obstacle sensor
-# irRight(): Returns state of Right IR Obstacle sensor
-# irAll(): Returns true if either of the Obstacle sensors are triggered
-# irLeftLine(): Returns state of Left IR Line sensor
-# irRightLine(): Returns state of Right IR Line sensor
-#======================================================================
-
-
 #======================================================================
 # UltraSonic Functions
 #
 # getDistance(). Returns the distance in cm to the nearest reflecting object. 0 == no object
-#======================================================================
-
-#======================================================================
-# Servo Functions
-# 
-# startServos(). Initialises the servo background process
-# stop Servos(). terminates the servo background process
-# setServo(Servo, Degrees). Sets the servo to position in degrees -90 to +90
 #======================================================================
 
 

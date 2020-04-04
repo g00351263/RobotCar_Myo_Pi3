@@ -47,10 +47,10 @@ Tested in a Raspberry Pi. video: https://www.youtube.com/watch?v=AWxEL4l4Fg8
 The Myo dongle bluetooth must be connected.
 
 - Open the console "terminal" 
-- Go to sample folder in the project
+- Go to project foler "project run" and run following command
 - Execute this command:
   ```
-  python run.py
+  python project.py
 
 
 ## Installations and Testing
@@ -83,19 +83,19 @@ The Myo dongle bluetooth must be connected.
 
 1. First is to connect Myo with Pi, Follow the code at http://www.fernandocosentino.net/pyoconnect/) also you can get here all the code to detect the poses.
 
-2. Setup The RoboHat into the python file by following code
-	1.	import robohat 
+2. Setup The carFunctions into the python file by following code
+	1.	import carFunctions 
 		1. this line gives access to roboHat libraries, which has the options to control 2 motors for running car all around, also i have fitted the ultrasonic sensor to detect the distance from an object.
 		
-			1.	Following are the pre-built functions used from library to move car
+			1.	Following are the functions to move car
 			
-				1. robohat.stop() for stopping car
-				2. robohat.forward() moving forward
-				3. robohat.reverse() to reverse
-				3. robohat.spinRight() to turn right
-				4. robohat.spinLeft() to turn Left
+				1. carFunctions.stop() for stopping car
+				2. carFunctions.forward() moving forward
+				3. carFunctions.reverse() to reverse
+				3. carFunctions.spinRight() to turn right
+				4. carFunctions.spinLeft() to turn Left
 			
-			2. Following is the functions made from pyoconnect to detect pose
+			2. Following is the functions made from myo file downloaded from pyoconnect to detect pose
 				
 				1. def on_Pose(pose):
 					if pose == pose.REST:
@@ -109,39 +109,39 @@ The Myo dongle bluetooth must be connected.
 				
 				1. def on_pose(pose):
 					if pose == pose.REST:
-					robohat.stop()
+					carFunctions.stop()
 					elif pose == pose.FIST:
-					robohat.reverse()
+					carFunctions.reverse()
 					elif pose == pose.WAVE_OUT:
-					robohat.spinLeft()
+					carFunctions.spinLeft()
 					elif pose == pose.WAVE_IN:
-					robohat.spinRight()
+					carFunctions.spinRight()
 					elif pose == pose.FINGERS_SPREAD:
-					robohat.forward()
+					carFunctions.forward()
 
 			4. We can get distance from the ultrasonic sensor 
-by using robohat.getDistance() and combining this with if statement in pose = Fist then get distance and distance less than 20 cms then turn right and continue until distance is less than 20 cms.
+by using carFunctions.getDistance() and combining this with if statement in pose = Fist then get distance and distance less than 20 cms then turn right and continue until distance is less than 20 cms.
 
 ## Files and Their Details
-1. run this for project.py = has main function to run and starting Myo listner to pass on values to car.
+1. run this for project.py = has main function to run and starting Myo device to pass on values to car.
 
-2. pose_listener.py = is used to get the poses performed and return funtions on detection of each pose.
+2. /project run/poseDetect.py = is used to get the poses performed and return functions of car controls on detection of each pose.
 
-3. device_listener.py = is used to start listening to Myo armband.
+3. /project run/myo_starter.py = is used to start listening to Myo armband.
 
-4. robohat = giving access to functions to robohat circuit using low level interace in Raspbbery pi 3.
+4. /project run/carFunctions.py = giving access to functions to robohat circuit using low level interace in Raspbbery pi 3.
 
-5. pose_type.py = enum giving access to pose types with numbers unique numbers assigned to each pose.
+5. project run/gesture.py = enum giving access to pose types with numbers unique numbers assigned to each pose.
 
-6. \lib\vibration_type.py = enum file for assigning numbers to vibration types
+6. \modules\myo_vibrate.py = enum file for assigning numbers to vibration types
 
-7. \lib\myo.py = has all the functions from myo libaries available for working with Myo (its downloaded from pyoconnect)
+7. \modules\myo.py = has all the functions from myo libaries available for working with Myo (its downloaded from pyoconnect)
 
-8. \lib\ble.py = is giving access to bluetooth of Raspberry pi with code downloaded one of the reference.
+8. \modules\bluetooth.py = is giving access to bluetooth of Raspberry pi with code downloaded one of the reference.
 
-9. \lib\packet.py = getting the structured function from utilities and returning data from my.
+9. \modules\myo_data.py = getting the structured function from utilities and returning data from my.
 
-10. \lib\utilities.py = is defining structure of for some of the functions will be used fetch,pass and map data.
+10. \modules\dataStruct.py = is defining structure of for some of the functions will be used fetch,pass and map data.
 
 ## Issues During The Project
 1. Shared the Pi and robohat with classmates, who burned down the pi and robohat, bought new robohat first, which was also defected and not supplying the current to dedicated motor connectors on roboHat. So, i utilized my electronics knowledge to change the one of the 2 diodes which were protecting the circuit on adapter connector and wire connector. hence, i used the direct wire connector which is shown by vin on robohat.

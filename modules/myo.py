@@ -1,8 +1,8 @@
 import re
-from bluetooth import Bluetooth
+from bluetooth import BLE
 from serial.tools.list_ports import comports
-from struct import *
-from vibration_type import VibrationType
+from dataStruct import *
+from myo_vibrate import VibrationType
 
 class Myo(object):
 
@@ -37,7 +37,7 @@ class Myo(object):
         if tty_port is None:
             raise ValueError('Bluetooth adapter not found!')
 
-        self.bluetooth = Bluetooth(tty_port)
+        self.bluetooth = BLE(tty_port)
 
     def find_tty(self):
         for port in comports():

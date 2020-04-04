@@ -2,28 +2,31 @@
 
 import sys
 import time
-# getting access to function for my from libaray
-sys.path.append('../modules/')
+
 # access to robohat function
-import car
+import carFunctions
+
+# getting access to function for my from libarar
+sys.path.append('../modules/')
+
 
 # accessing my libraries
 from myo import Myo
 
 # access to poses libarary
-from print_pose_listener import PrintPoseListener
+from poseDetect import PrintPoseListener
 
 # accessing the myo viration library
-from vibration_type import VibrationType
+from myo_vibrate import VibrationType
 
 # accessing the pose and type of pose interface
-from pose_type import PoseType
+from gesture import PoseType
 
 # connection listner to myo
-from device_listener import DeviceListener
+from myo_starter import DeviceListener
 
 # intialising the robohat circuit
-car.init()
+carFunctions.init()
 
 # main method
 def main():

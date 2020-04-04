@@ -1,4 +1,4 @@
-from struct import *
+from dataStruct import *
 
 class Packet(object):
     def __init__(self, ords):
